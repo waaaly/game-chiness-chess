@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Chess</title>
+    </head>
+    <style>
+        .chess-board-box{
+            display: flex;
+            justify-content: space-around;
+        }
+        .chess-board{
+            background-image: url('./images/board.jpg');
+            position: relative;
+            width: 521px;
+            height: 577px;
+        }
+        .chess-img{
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 57px;
+            height: 57px;
+            z-index: 0;
+            cursor: pointer;
+        }
+        .chess-way{
+            position: absolute;
+            height: 13px;
+            width: 13px;
+            border-radius: 50%;
+        }
+        .selected-chess-img{
+            position: absolute;
+            width: 57px;
+            height: 57px;
+            z-index: 1;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div class="chess-board-box">
+            <div id='board' class="chess-board"></div>
+        </div>
+        <script src="socket.io.js"></script>
+        <script >
+            var player = null;
+            var FEN = null;
+            var IN_BOARD = []
+            // var FEN = 'rnba1ab1r/3C1k3/1c5cn/p1p4Cp/2P1p4/4P1p2/P4RP1P/9/4A4/RNBAK1BN1'
+        </script>
+        <script src="client.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
